@@ -1,0 +1,68 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ <script src="formvalid.js"></script>
+ <link rel="stylesheet" type="text/css" href="form.css">
+ </head>
+ <body>
+	<h2>Application Form</h2>
+	<p id="head"></p><br>
+    <form name="ApplicationForm" method="post" action="http://404.elbrightness.com/PROG1800/printresult.php">
+		<fieldset>
+			<legend>Personal Info:</legend>
+				<label class="req" for="fname">First Name:</label>
+				<input type="text" name="fname" id="fname" maxlength="35" onblur="titleCase(this.id)" required autofocus tabindex="1" >
+			 	<br><br>
+				<label class="req" for="lname">Last Name:</label>
+				<input type="text" name="lname" id="lname" maxlength="35" onblur="titleCase(this.id)" required tabindex="2">
+				<br><br>
+				<label class="req" for="email">Your Email address:</label>
+				<input type="email" name="email" id="email" maxlength="35" onblur="titleCase(this.id)" required tabindex="3">
+			    <p id="p3"></p> <!--This segment displays the validation rule for email--> <br><br>
+				<label for="address">Addresss:</label>
+				<input type="text" name="address" id="address" maxlength="35"  onblur="titleCase(this.id)" tabindex="4"><br><br>
+				<label class="req" for="city">City:</label>
+				<input type="text" name="city" id="city" onblur="titleCase(this.id)" required tabindex="5">
+				<p id="p4"></p> <!--This segment displays the validation rule for city--><br><br>
+				<label class="req" for="postal">Postal Code:</label>
+				<input type="text" name="postal" id="postal" size="30" maxlength="6" onblur="convertToUpper()" required tabindex="6">
+				<p id="p5"></p> <!--This segment displays the validation rule for zip--> <br><br>
+				<label for="mStatus">Marital Status:</label>
+				<select name="mStatus" tabindex="7">
+					<option value="single">Single</option>
+					<option value="commonlaw">Common-Law</option>
+					<option value="married">Married</option>
+					<option value="seperated">Seperated</option>
+					<option value="divorced">Divorced</option>
+				</select><br><br>
+				<label for="gender">Gender:</label><br>
+				<input type="radio" name="gender" value="male" checked> Male<br>
+                <input type="radio" name="gender" value="female"> Female<br>
+                <input type="radio" name="gender" value="other"> Other<br>
+		</fieldset>
+		<fieldset>
+			<legend>Educational Info:</legend>
+			<label for="areas">Select acheived education:</label><br>
+			<input id="check" type="checkbox" name="education1" tabindex="8" value="elementary">Elementary<br>
+            <input id="check" type="checkbox" name="education2" value="highschool" checked>High School<br>
+			<input id="check" type="checkbox" name="education2" value="college">College<br>
+			<input id="check" type="checkbox" name="education2" value="postgraduate">Post Graduate<br><br>
+			<label for="grades">Overall Grades :</label>
+			<select name="grades" tabindex="9">
+				<option value="a+">A+</option>
+				<option value="a">A</option>
+				<option value="b">B</option>
+				<option value="c">C</option>
+				<option value="d">D</option>
+			</select>
+		</fieldset>
+		<fieldset id="buttons">
+			<legend>Submit Your Survey</legend>
+			<button type="submit" value="Submit" onclick="return formValidation()" tabindex="10">Submit</button>
+            <button type="reset" value="Reset">Reset</button>
+		</fieldset>
+	</form>
+</body>
+</html>
+					
+                   

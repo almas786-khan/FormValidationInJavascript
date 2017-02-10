@@ -1,0 +1,48 @@
+
+       .req:after 
+	           { 
+	             content:"*";
+	             color: red;
+	           }
+	   fieldset{
+                 margin: 30px;
+                 padding: 30px;				 
+	           }
+	   legend
+	          {
+	      color: blue;
+		  font-weight: bold;
+		  font-size: 20;
+	          }
+	  label
+	      {
+	      float: left;
+		  width: 250px;
+		 }
+	  input, select{
+		   width: 150px;
+		   margin-left:0.1em;
+		   margin-bottom: 0.1em;
+		 }
+	  
+	  br{
+		  clear: both;
+		 }
+	  #buttons button
+	   {
+	    width:10em;
+	    font-weight: bold;
+	    box-shadow: 2px 2px 0 black;
+	   }
+     #head
+	 {
+		 color: red;
+		 font-weight: bold;
+		 text-align: center;
+	 }
+	 #p3, #p4, #p5
+	 {
+		 color: red;
+		 font-weight: bold;
+		 text-align: left;
+	 }
